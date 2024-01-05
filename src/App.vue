@@ -69,7 +69,7 @@ export default {
         <div class="col logo">
           <div class="card">
             <div class="card-body">
-              <h1 class="card-title">Bloodbank</h1>
+              <h1 class="card-title">BLOODBANK</h1>
               <p class="card-text">
                 <span class="text-num"> {{ data.BB }}</span>
               </p>
@@ -80,7 +80,7 @@ export default {
         <div class="col logo">
           <div class="card" style="width: 100%">
             <div class="card-body">
-              <h1 class="card-title">Cyto</h1>
+              <h1 class="card-title">CYTO</h1>
               <p class="card-text">
                 <span class="text-num"> {{ data.CYTO }}</span>
               </p>
@@ -90,7 +90,7 @@ export default {
         <div class="col logo">
           <div class="card" style="width: 100%">
             <div class="card-body">
-              <h1 class="card-title">Phato</h1>
+              <h1 class="card-title">PATHO</h1>
               <p class="card-text">
                 <span class="text-num"> {{ data.PATHO }}</span>
               </p>
