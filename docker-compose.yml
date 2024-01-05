@@ -1,0 +1,11 @@
+# docker-compose up -d
+# version: "3.8"
+version: "3.3"
+
+services:
+  frontend:
+    build: ./
+    image: lab-dashboard
+    container_name: lab-dashboard-con
+    ports:
+      - 88:80
