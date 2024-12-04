@@ -1,7 +1,5 @@
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
-// import udch from './assets/udch.png'
-
 import axios from 'axios'
 
 export default {
@@ -18,6 +16,7 @@ export default {
       axios.get(import.meta.env.VITE_API_KEY)
       .then((res)=> {
         if(res.data.result === "DONE"){
+          console.log(res.data)
           this.data = res.data.data[0]
           this.lastUpdate = res.data.data[0].time
         }
@@ -39,22 +38,25 @@ export default {
     <nav class="navbar bg-body-tertiary">
       <div class="container text-center">
         <div class="row">
-          <div class="col"><img src="https://www.udch.go.th/images/logo/logo2l.png" width="300" /></div>
+          <div class="col"><img src="./assets/udch.png" width="80" /></div>
         </div>
       </div>
     </nav>
-    <h1 style="padding: 3em 0px 1em 0px">{{ title }}</h1>
+    <h1 style="padding: 2em 0px 1em 0px">{{ title }}</h1>
+
+
     <div class="container text-center">
       <!-- <div class="container text-center">
-      <div class="row row-cols-4">
+      <div class="row row-cols-5">
         <div class="col">Column</div>
         <div class="col">Column</div>
         <div class="col">Column</div>
         <div class="col">Column</div>
-      </div>
-    </div> -->
+        <div class="col">Column</div>
+      </div> -->
+    <!-- </div> -->
 
-      <div class="row">
+      <div class="row row-cols-5">
         <div class="col logo">
           <div class="card">
             <div class="card-body">
@@ -97,6 +99,17 @@ export default {
             </div>
           </div>
         </div>
+
+        <div class="col logo">
+          <div class="card" style="width: 100%">
+            <div class="card-body">
+              <h1 class="card-title">NON GYNAE</h1>
+              <p class="card-text">
+                <span class="text-num"> {{ data.NONGYNAE }}</span>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -117,11 +130,16 @@ export default {
   font-weight: bold;
   border-radius: 10%;
 }
+.card-title{
+  height: 100px;
+  align-content: center
+}
 .logo {
   /* height: 6em; */
   /* padding: 1.5em; */
   will-change: filter;
   transition: filter 300ms;
+  
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
